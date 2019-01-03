@@ -5,7 +5,8 @@ const NoteSchema = mongoose.Schema({
     description: String,
     status: String,
     remind: String,
-    color: String
+    color: String,
+    orderIndex: Number
 }, {
     timestamps: true
 });

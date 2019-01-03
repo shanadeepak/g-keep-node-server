@@ -15,7 +15,8 @@ exports.create = (req, res) => {
         description: req.body.description || "",
         status: req.body.status || "",
         remind: req.body.remind || "",
-        color: req.body.color || ""
+        color: req.body.color || "",
+        orderIndex: req.body.orderIndex || 9999
     });
 
     // Save Note in the database
@@ -78,7 +79,8 @@ exports.update = (req, res) => {
             description: req.body.description || "",
             color: req.body.color,
             status: req.body.status,
-            remind: req.body.remind
+            remind: req.body.remind,
+            orderIndex: req.body.orderIndex
         }, { new: true })
         .then(note => {
             if (!note) {
